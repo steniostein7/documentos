@@ -4,72 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentação 2026 | Professor MG</title>
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         :root {
-            --primary: #6B3B6F; /* Roxo DED+ */
-            --accent: #FF8A65;  /* Laranja DED+ */
+            --primary: #6B3B6F; 
+            --accent: #FF8A65;  
             --bg: #fdfdfd;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: #333; line-height: 1.6; }
         
-        /* Cabeçalho */
         header { background: var(--primary); color: white; padding: 40px 20px; text-align: center; border-bottom: 8px solid var(--accent); }
         .container { max-width: 800px; margin: 20px auto; padding: 20px; }
         h1 { font-size: 1.8em; margin-bottom: 10px; }
         
-        /* Introdução */
         .intro { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border-left: 5px solid var(--accent); }
 
-        /* Seções de Documentos */
         .doc-section { margin-bottom: 40px; }
         .doc-section h2 { color: var(--primary); font-size: 1.4em; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
         
-        /* Grade de 2 Colunas para Documentos Pessoais */
-        .doc-grid { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
-            gap: 15px; 
-        }
+        .doc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
 
-        /* Itens Individuais */
-        .doc-item { background: white; padding: 15px 20px; border-radius: 10px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: 0.2s; border: 1px solid #f0f0f0; }
-        /* Ajuste para itens dentro do Grid */
-        .doc-grid .doc-item { margin-bottom: 0; height: 100%; } 
-        
+        .doc-item { background: white; padding: 15px 20px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: 0.2s; border: 1px solid #f0f0f0; }
         .doc-item:hover { transform: translateX(5px); border-color: var(--accent); }
         .doc-info { flex: 1; padding-right: 10px; }
         .doc-title { font-weight: 600; font-size: 0.95em; color: #444; display: block; }
         .doc-meta { font-size: 0.8em; color: #888; display: block; margin-top: 2px; }
 
-        /* Botões */
-        .btn { padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85em; transition: 0.3s; text-align: center; display: inline-block; white-space: nowrap; }
+        .btn { padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85em; transition: 0.3s; text-align: center; display: inline-block; cursor: pointer; border: none; }
         .btn-download { background: var(--accent); color: white; }
         .btn-link { background: var(--primary); color: white; }
         .btn:hover { opacity: 0.9; transform: scale(1.05); }
 
-        /* Status (Original/Cópia/Etc) */
-        .status-badge { font-size: 0.75em; padding: 4px 10px; border-radius: 20px; background: #eee; color: #777; font-weight: 600; white-space: nowrap; }
+        .status-badge { font-size: 0.75em; padding: 4px 10px; border-radius: 20px; background: #eee; color: #777; font-weight: 600; }
 
-        /* Propaganda do APP */
-        .app-promo { background: linear-gradient(135deg, var(--primary) 0%, #4a294d 100%); color: white; padding: 35px; border-radius: 20px; text-align: center; margin: 50px 0; box-shadow: 0 10px 25px rgba(107, 59, 111, 0.2); }
-        .app-promo h2 { color: var(--accent); margin-bottom: 10px; }
-        .app-promo p { font-size: 0.95em; margin-bottom: 20px; opacity: 0.9; }
-        .btn-app { background: var(--accent); color: white; padding: 12px 25px; border-radius: 50px; font-size: 1em; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: 0.3s; display: inline-block; }
-        .btn-app:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
-
-        /* Rodapé */
-        footer { text-align: center; padding: 40px; color: #999; font-size: 0.85em; border-top: 1px solid #eee; margin-top: 20px; }
+        /* Rodapé de Apoio (PIX) */
+        .pix-section { background: #fff; padding: 30px; border-radius: 15px; text-align: center; margin-top: 50px; border: 1px dashed #ccc; }
+        .pix-section h3 { font-size: 1.1em; color: var(--primary); margin-bottom: 10px; }
+        .pix-section p { font-size: 0.85em; color: #666; margin-bottom: 15px; }
         
-        /* Responsividade (Celular) */
+        .pix-container { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+        .pix-box { 
+            background: #f8f9fa; 
+            padding: 12px 20px; 
+            border-radius: 8px; 
+            border: 1px solid #eee; 
+            font-family: monospace; 
+            font-weight: bold; 
+            color: var(--primary); 
+            font-size: 1em;
+            word-break: break-all;
+            max-width: 100%;
+        }
+        .btn-copy { background: #28a745; color: white; padding: 10px 20px; width: auto; min-width: 150px; }
+        .btn-copy.copied { background: var(--primary); }
+
+        .coffee-icon { color: #6F4E37; margin-bottom: 10px; font-size: 1.5em; }
+
+        footer { text-align: center; padding: 40px; color: #999; font-size: 0.85em; }
+        
         @media (max-width: 600px) {
-            .doc-grid { grid-template-columns: 1fr; } /* Volta para 1 coluna */
+            .doc-grid { grid-template-columns: 1fr; }
             .doc-item { flex-direction: column; align-items: flex-start; gap: 10px; }
-            .btn, .status-badge { width: 100%; text-align: center; }
-            .doc-grid .doc-item { margin-bottom: 15px; }
+            .btn { width: 100%; }
         }
     </style>
 </head>
@@ -77,16 +77,16 @@
 
 <header>
     <h1>Documentação para Contratação 2026</h1>
-    <p style="font-size: 0.9em; opacity: 0.9;">Organize sua documentação para a rede estadual de MG</p>
+    <p style="font-size: 0.9em; opacity: 0.9;">Central de documentos oficiais para a rede estadual de MG</p>
 </header>
 
 <div class="container">
     <div class="intro">
-        <p>Prezado(a) colega, preparamos esta central para facilitar sua vida. Abaixo você encontrará os modelos oficiais para download, links para emissão das certidões e a lista completa de documentos pessoais.</p>
+        <p>Prezado(a) colega, organizamos esta central para facilitar o seu processo de contratação. Abaixo você encontrará os modelos oficiais para download e os links diretos para emissão das certidões obrigatórias.</p>
     </div>
 
     <div class="doc-section">
-        <h2>📂 Modelos para Download</h2>
+        <h2><i class="fas fa-file-download"></i> Modelos para Download</h2>
         
         <div class="doc-item">
             <div class="doc-info">
@@ -99,7 +99,7 @@
         <div class="doc-item">
             <div class="doc-info">
                 <span class="doc-title">Questionário Antecedentes Clínicos</span>
-                <span class="doc-meta">Anexo II - Envelopar e identificar</span>
+                <span class="doc-meta">Anexo II - Preencher e identificar</span>
             </div>
             <a href="anexo-ii-antecedentes.pdf" class="btn btn-download" download>Download PDF</a>
         </div>
@@ -107,56 +107,56 @@
         <div class="doc-item">
             <div class="doc-info">
                 <span class="doc-title">Declaração de Residência</span>
-                <span class="doc-meta">Caso não possua comprovante em seu nome</span>
+                <span class="doc-meta">Uso opcional (se não houver conta em seu nome)</span>
             </div>
             <a href="declaracao-residencia.pdf" class="btn btn-download" download>Download PDF</a>
         </div>
     </div>
 
     <div class="doc-section">
-        <h2>🔗 Links para Emissão</h2>
+        <h2><i class="fas fa-link"></i> Certidões e Links Oficiais</h2>
 
         <div class="doc-item">
             <div class="doc-info">
-                <span class="doc-title">Certidão de Quitação Eleitoral</span>
-                <span class="doc-meta">Emitido pelo site do TSE</span>
+                <span class="doc-title">Quitação Eleitoral</span>
+                <span class="doc-meta">Emitido via site do TSE</span>
             </div>
-            <a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral#/certidoes-eleitor" target="_blank" class="btn btn-link">Acessar Site</a>
+            <a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral#/certidoes-eleitor" target="_blank" class="btn btn-link">Acessar TSE</a>
         </div>
 
         <div class="doc-item">
             <div class="doc-info">
-                <span class="doc-title">Atestado Antecedentes Criminais</span>
-                <span class="doc-meta">Emitido pela Polícia Civil de MG</span>
+                <span class="doc-title">Antecedentes Criminais</span>
+                <span class="doc-meta">Polícia Civil de Minas Gerais</span>
             </div>
-            <a href="https://www.policiacivil.mg.gov.br/pagina/emissao-atestado" target="_blank" class="btn btn-link">Acessar Site</a>
+            <a href="https://www.policiacivil.mg.gov.br/pagina/emissao-atestado" target="_blank" class="btn btn-link">Acessar PCMG</a>
         </div>
     </div>
 
     <div class="doc-section">
-        <h2>📄 Documentos Pessoais</h2>
+        <h2><i class="fas fa-id-card"></i> Documentação para Exercício</h2>
         
         <div class="doc-grid">
             <div class="doc-item">
                 <div class="doc-info">
-                    <span class="doc-title">Identificação Oficial (RG)</span>
-                    <span class="doc-meta">Com foto e validade</span>
+                    <span class="doc-title">Identidade (RG)</span>
+                    <span class="doc-meta">Original com foto</span>
                 </div>
-                <span class="status-badge">Original</span>
+                <span class="status-badge">Obrigatório</span>
             </div>
 
             <div class="doc-item">
                 <div class="doc-info">
                     <span class="doc-title">Comprovante de Endereço</span>
-                    <span class="doc-meta">Conta de Água, luz ou tel.</span>
+                    <span class="doc-meta">Água, luz ou telefone</span>
                 </div>
                 <span class="status-badge">Últimos 3 meses</span>
             </div>
 
             <div class="doc-item">
                 <div class="doc-info">
-                    <span class="doc-title">Habilitação ou Diploma</span>
-                    <span class="doc-meta">Com histórico escolar</span>
+                    <span class="doc-title">Habilitação/Diploma</span>
+                    <span class="doc-meta">Incluindo histórico escolar</span>
                 </div>
                 <span class="status-badge">Original</span>
             </div>
@@ -164,14 +164,14 @@
             <div class="doc-item">
                 <div class="doc-info">
                     <span class="doc-title">Contagem de Tempo</span>
-                    <span class="doc-meta">P/ quem alterou o tempo no sistema</span>
+                    <span class="doc-meta">Para quem alterou a contagem no sistema</span>
                 </div>
-                <span class="status-badge">Original</span>
+                <span class="status-badge">Cópia e Orig.</span>
             </div>
 
             <div class="doc-item">
                 <div class="doc-info">
-                    <span class="doc-title">Inscrição PIS/PASEP</span>
+                    <span class="doc-title">PIS/PASEP</span>
                     <span class="doc-meta">Cartão ou extrato</span>
                 </div>
                 <span class="status-badge">Obrigatório</span>
@@ -187,18 +187,51 @@
         </div>
     </div>
 
-    <section class="app-promo">
-        <h2>🚀 Cansado de lutar com o DED?</h2>
-        <p>Conheça o <b>DED+ Mobile</b>. O Diário Escolar Digital otimizado para seu celular: tela cheia, login rápido e sem travamentos.</p>
-        <a href="https://ded.professormg.com.br" class="btn-app">BAIXAR APP GRATUITO</a>
-    </section>
+    <div class="pix-section">
+        <div class="coffee-icon"><i class="fas fa-coffee"></i></div>
+        <h3>Gostou da facilidade?</h3>
+        <p>Este portal é mantido de forma independente. Se ele te poupou tempo e você quiser apoiar a manutenção do projeto, você pode pagar um café para o desenvolvedor:</p>
+        
+        <div class="pix-container">
+            <div class="pix-box" id="pixKey">00020101021126580014br.gov.bcb.pix0136fef424b2-cc34-443d-9070-7d375b47f0055204000053039865802BR5917STENIO C F GARCIA6010CAMPO BELO62070503***6304D967</div>
+            <button class="btn btn-copy" id="copyBtn" onclick="copyPix()">
+                <i class="fas fa-copy"></i> Copiar Chave PIX
+            </button>
+        </div>
+
+        <p style="font-size: 0.7em; margin-top: 15px; color: #999;">Contribuição voluntária e não obrigatória.</p>
+    </div>
+
+    <footer>
+        <p>Professor MG | Tecbox Academy</p>
+        <p>&copy; 2026 - Desenvolvido para facilitar a educação mineira.</p>
+    </footer>
 
 </div>
 
-<footer>
-    <p>Desenvolvido para facilitar a vida do Professor mineiro.</p>
-    <p>&copy; 2026 Professor MG | Techbox Academy</p>
-</footer>
+<script>
+    function copyPix() {
+        // Seleciona o texto da chave
+        const pixKey = document.getElementById('pixKey').innerText;
+        const btn = document.getElementById('copyBtn');
+        
+        // Copia para a área de transferência
+        navigator.clipboard.writeText(pixKey).then(() => {
+            // Feedback visual
+            btn.innerHTML = '<i class="fas fa-check"></i> Chave Copiada!';
+            btn.classList.add('copied');
+            
+            // Volta ao normal após 2 segundos
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-copy"></i> Copiar Chave PIX';
+                btn.classList.remove('copied');
+            }, 2000);
+        }).catch(err => {
+            console.error('Erro ao copiar: ', err);
+            alert('Erro ao copiar. Por favor, selecione e copie manualmente.');
+        });
+    }
+</script>
 
 </body>
 </html>
