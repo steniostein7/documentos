@@ -59,8 +59,10 @@
             word-break: break-all;
             max-width: 100%;
         }
-        .btn-copy { background: #28a745; color: white; padding: 10px 20px; width: auto; min-width: 150px; }
-        .btn-copy.copied { background: var(--primary); }
+        
+        /* ESTILO DO BOTÃO DE COPIAR E FEEDBACK */
+        .btn-copy { background: #28a745; color: white; padding: 10px 20px; width: auto; min-width: 180px; }
+        .btn-copy.copied { background: var(--primary) !important; transform: scale(1.0); }
 
         .coffee-icon { color: #6F4E37; margin-bottom: 10px; font-size: 1.5em; }
 
@@ -87,7 +89,6 @@
 
     <div class="doc-section">
         <h2><i class="fas fa-file-download"></i> Modelos para Download</h2>
-        
         <div class="doc-item">
             <div class="doc-info">
                 <span class="doc-title">Modelo de Atestado Médico</span>
@@ -95,7 +96,6 @@
             </div>
             <a href="modelo-atestado.pdf" class="btn btn-download" download>Download PDF</a>
         </div>
-
         <div class="doc-item">
             <div class="doc-info">
                 <span class="doc-title">Questionário Antecedentes Clínicos</span>
@@ -103,7 +103,6 @@
             </div>
             <a href="anexo-ii-antecedentes.pdf" class="btn btn-download" download>Download PDF</a>
         </div>
-
         <div class="doc-item">
             <div class="doc-info">
                 <span class="doc-title">Declaração de Residência</span>
@@ -115,7 +114,6 @@
 
     <div class="doc-section">
         <h2><i class="fas fa-link"></i> Certidões e Links Oficiais</h2>
-
         <div class="doc-item">
             <div class="doc-info">
                 <span class="doc-title">Quitação Eleitoral</span>
@@ -123,7 +121,6 @@
             </div>
             <a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral#/certidoes-eleitor" target="_blank" class="btn btn-link">Acessar TSE</a>
         </div>
-
         <div class="doc-item">
             <div class="doc-info">
                 <span class="doc-title">Antecedentes Criminais</span>
@@ -135,53 +132,29 @@
 
     <div class="doc-section">
         <h2><i class="fas fa-id-card"></i> Documentação para Exercício</h2>
-        
         <div class="doc-grid">
             <div class="doc-item">
-                <div class="doc-info">
-                    <span class="doc-title">Identidade (RG)</span>
-                    <span class="doc-meta">Original com foto</span>
-                </div>
+                <div class="doc-info"><span class="doc-title">Identidade (RG)</span><span class="doc-meta">Original com foto</span></div>
                 <span class="status-badge">Obrigatório</span>
             </div>
-
             <div class="doc-item">
-                <div class="doc-info">
-                    <span class="doc-title">Comprovante de Endereço</span>
-                    <span class="doc-meta">Água, luz ou telefone</span>
-                </div>
+                <div class="doc-info"><span class="doc-title">Comprovante de Endereço</span><span class="doc-meta">Água, luz ou telefone</span></div>
                 <span class="status-badge">Últimos 3 meses</span>
             </div>
-
             <div class="doc-item">
-                <div class="doc-info">
-                    <span class="doc-title">Habilitação/Diploma</span>
-                    <span class="doc-meta">Incluindo histórico escolar</span>
-                </div>
+                <div class="doc-info"><span class="doc-title">Habilitação/Diploma</span><span class="doc-meta">Incluindo histórico escolar</span></div>
                 <span class="status-badge">Original</span>
             </div>
-
             <div class="doc-item">
-                <div class="doc-info">
-                    <span class="doc-title">Contagem de Tempo</span>
-                    <span class="doc-meta">Para quem alterou a contagem no sistema</span>
-                </div>
+                <div class="doc-info"><span class="doc-title">Contagem de Tempo</span><span class="doc-meta">Para quem alterou no sistema</span></div>
                 <span class="status-badge">Cópia e Orig.</span>
             </div>
-
             <div class="doc-item">
-                <div class="doc-info">
-                    <span class="doc-title">PIS/PASEP</span>
-                    <span class="doc-meta">Cartão ou extrato</span>
-                </div>
+                <div class="doc-info"><span class="doc-title">PIS/PASEP</span><span class="doc-meta">Cartão ou extrato</span></div>
                 <span class="status-badge">Obrigatório</span>
             </div>
-
             <div class="doc-item">
-                <div class="doc-info">
-                    <span class="doc-title">Obrigações Militares</span>
-                    <span class="doc-meta">Masc. até 45 anos</span>
-                </div>
+                <div class="doc-info"><span class="doc-title">Obrigações Militares</span><span class="doc-meta">Masc. até 45 anos</span></div>
                 <span class="status-badge">Reservista</span>
             </div>
         </div>
@@ -190,15 +163,13 @@
     <div class="pix-section">
         <div class="coffee-icon"><i class="fas fa-coffee"></i></div>
         <h3>Gostou da facilidade?</h3>
-        <p>Este portal é mantido de forma independente. Se ele te poupou tempo e você quiser apoiar a manutenção do projeto, você pode pagar um café para o desenvolvedor:</p>
-        
+        <p>Este portal é mantido de forma independente. Se ele te poupou tempo e você quiser apoiar o projeto, você pode pagar um café para o desenvolvedor:</p>
         <div class="pix-container">
-            <div class="pix-box" id="pixKey">00020101021126580014br.gov.bcb.pix0136fef424b2-cc34-443d-9070-7d375b47f0055204000053039865802BR5917STENIO C F GARCIA6010CAMPO BELO62070503***6304D967</div>
+            <div class="pix-box" id="pixKey">00020126650014br.gov.bcb.pix0136c3953e45-f646-4153-a427-8229e59a26ab0203Pix5204000053039865802BR5925STENIO CARLOS FERREIRA GA6010CAMPO BELO62160512DoacaoProfMG630461EB</div>
             <button class="btn btn-copy" id="copyBtn" onclick="copyPix()">
                 <i class="fas fa-copy"></i> Copiar Chave PIX
             </button>
         </div>
-
         <p style="font-size: 0.7em; margin-top: 15px; color: #999;">Contribuição voluntária e não obrigatória.</p>
     </div>
 
@@ -206,32 +177,25 @@
         <p>Professor MG | Tecbox Academy</p>
         <p>&copy; 2026 - Desenvolvido para facilitar a educação mineira.</p>
     </footer>
-
 </div>
 
 <script>
     function copyPix() {
-        // Seleciona o texto da chave
         const pixKey = document.getElementById('pixKey').innerText;
         const btn = document.getElementById('copyBtn');
         
-        // Copia para a área de transferência
         navigator.clipboard.writeText(pixKey).then(() => {
-            // Feedback visual
             btn.innerHTML = '<i class="fas fa-check"></i> Chave Copiada!';
             btn.classList.add('copied');
             
-            // Volta ao normal após 2 segundos
             setTimeout(() => {
                 btn.innerHTML = '<i class="fas fa-copy"></i> Copiar Chave PIX';
                 btn.classList.remove('copied');
             }, 2000);
         }).catch(err => {
-            console.error('Erro ao copiar: ', err);
-            alert('Erro ao copiar. Por favor, selecione e copie manualmente.');
+            alert('Erro ao copiar chave.');
         });
     }
 </script>
-
 </body>
 </html>
