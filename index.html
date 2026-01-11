@@ -44,7 +44,6 @@
         /* Rodapé de Apoio (PIX) */
         .pix-section { background: #fff; padding: 30px; border-radius: 15px; text-align: center; margin-top: 50px; border: 1px dashed #ccc; }
         .pix-section h3 { font-size: 1.1em; color: var(--primary); margin-bottom: 10px; }
-        .pix-section p { font-size: 0.85em; color: #666; margin-bottom: 15px; }
         
         .pix-container { display: flex; flex-direction: column; align-items: center; gap: 10px; }
         .pix-box { 
@@ -60,9 +59,9 @@
             max-width: 100%;
         }
         
-        /* ESTILO DO BOTÃO DE COPIAR E FEEDBACK */
         .btn-copy { background: #28a745; color: white; padding: 10px 20px; width: auto; min-width: 180px; }
-        .btn-copy.copied { background: var(--primary) !important; transform: scale(1.0); }
+        /* Classe de feedback */
+        .btn-copy.copied { background: var(--primary) !important; }
 
         .coffee-icon { color: #6F4E37; margin-bottom: 10px; font-size: 1.5em; }
 
@@ -163,7 +162,7 @@
     <div class="pix-section">
         <div class="coffee-icon"><i class="fas fa-coffee"></i></div>
         <h3>Gostou da facilidade?</h3>
-        <p>Este portal é mantido de forma independente. Se ele te poupou tempo e você quiser apoiar o projeto, você pode pagar um café para o desenvolvedor:</p>
+        <p>Este portal é mantido de forma independente. Se ele te poupou tempo e você quiser apoiar o projeto, pode pagar um café para o desenvolvedor:</p>
         <div class="pix-container">
             <div class="pix-box" id="pixKey">00020126650014br.gov.bcb.pix0136c3953e45-f646-4153-a427-8229e59a26ab0203Pix5204000053039865802BR5925STENIO CARLOS FERREIRA GA6010CAMPO BELO62160512DoacaoProfMG630461EB</div>
             <button class="btn btn-copy" id="copyBtn" onclick="copyPix()">
@@ -181,20 +180,31 @@
 
 <script>
     function copyPix() {
-        const pixKey = document.getElementById('pixKey').innerText;
-        const btn = document.getElementById('copyBtn');
-        
-        navigator.clipboard.writeText(pixKey).then(() => {
+        var pixKeyText = document.getElementById('pixKey').innerText;
+        var btn = document.getElementById('copyBtn');
+
+        // Cria um elemento temporário para garantir a cópia em qualquer navegador
+        var tempInput = document.createElement("input");
+        tempInput.value = pixKeyText;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999); // Para dispositivos móveis
+
+        try {
+            document.execCommand("copy");
+            // Feedback Visual
             btn.innerHTML = '<i class="fas fa-check"></i> Chave Copiada!';
             btn.classList.add('copied');
             
-            setTimeout(() => {
+            setTimeout(function() {
                 btn.innerHTML = '<i class="fas fa-copy"></i> Copiar Chave PIX';
                 btn.classList.remove('copied');
             }, 2000);
-        }).catch(err => {
-            alert('Erro ao copiar chave.');
-        });
+        } catch (err) {
+            alert("Erro ao copiar. Por favor, selecione o texto manualmente.");
+        }
+
+        document.body.removeChild(tempInput);
     }
 </script>
 </body>
