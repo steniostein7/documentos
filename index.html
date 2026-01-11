@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação 2026 | Professor MG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6B3B6F; /* Roxo DED+ */
+            --accent: #FF8A65;  /* Laranja DED+ */
+            --bg: #fdfdfd;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: #333; line-height: 1.6; }
+        
+        header { background: var(--primary); color: white; padding: 40px 20px; text-align: center; border-bottom: 8px solid var(--accent); }
+        .container { max-width: 800px; margin: 20px auto; padding: 20px; }
+        
+        .intro { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border-left: 5px solid var(--accent); }
+
+        .doc-section { margin-bottom: 40px; }
+        .doc-section h2 { color: var(--primary); font-size: 1.4em; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        
+        .doc-item { background: white; padding: 15px 20px; border-radius: 10px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: 0.2s; border: 1px solid #f0f0f0; }
+        .doc-item:hover { transform: translateX(5px); border-color: var(--accent); }
+        .doc-title { font-weight: 600; font-size: 0.95em; color: #444; }
+        .doc-meta { font-size: 0.8em; color: #888; display: block; }
+
+        .btn { padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85em; transition: 0.3s; text-align: center; display: inline-block; }
+        .btn-download { background: var(--accent); color: white; }
+        .btn-link { background: var(--primary); color: white; }
+        .btn:hover { opacity: 0.9; transform: scale(1.05); }
+
+        .status-badge { font-size: 0.75em; padding: 4px 10px; border-radius: 20px; background: #eee; color: #777; font-weight: 600; }
+
+        /* NOVA SEÇÃO DE PROPAGANDA DO APP */
+        .app-promo { background: linear-gradient(135deg, var(--primary) 0%, #4a294d 100%); color: white; padding: 35px; border-radius: 20px; text-align: center; margin: 40px 0; box-shadow: 0 10px 25px rgba(107, 59, 111, 0.2); }
+        .app-promo h2 { color: var(--accent); margin-bottom: 10px; }
+        .app-promo p { font-size: 0.95em; margin-bottom: 20px; opacity: 0.9; }
+        .btn-app { background: var(--accent); color: white; padding: 12px 25px; border-radius: 50px; font-size: 1em; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: 0.3s; display: inline-block; }
+        .btn-app:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+
+        footer { text-align: center; padding: 40px; color: #999; font-size: 0.85em; }
+        
+        @media (max-width: 600px) {
+            .doc-item { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Checklist de Contratação 2026</h1>
+    <p style="font-size: 0.9em; opacity: 0.9;">Organize sua documentação para a rede estadual de MG</p>
+</header>
+
+<div class="container">
+    <div class="intro">
+        <p>Prezado(a) colega, preparamos esta central para facilitar sua vida. Abaixo você encontrará os modelos oficiais para download e os links para emissão das certidões obrigatórias.</p>
+    </div>
+
+    <div class="doc-section">
+        <h2>📂 Modelos para Download</h2>
+        <div class="doc-item">
+            <div class="doc-info">
+                <span class="doc-title">Modelo de Atestado Médico</span>
+                <span class="doc-meta">Comprovante de exame pré-admissional</span>
+            </div>
+            <a href="modelo-atestado.pdf" class="btn btn-download" download>Download</a>
+        </div>
+        <div class="doc-item">
+            <div class="doc-info">
+                <span class="doc-title">Questionário de Antecedentes Clínicos</span>
+                <span class="doc-meta">Anexo II - Envelopar e identificar</span>
+            </div>
+            <a href="anexo-ii-antecedentes.pdf" class="btn btn-download" download>Download</a>
+        </div>
+        <div class="doc-item">
+            <div class="doc-info">
+                <span class="doc-title">Declaração de Residência</span>
+                <span class="doc-meta">Caso não possua comprovante em seu nome</span>
+            </div>
+            <a href="declaracao-residencia.pdf" class="btn btn-download" download>Download</a>
+        </div>
+    </div>
+
+    <div class="doc-section">
+        <h2>🔗 Links para Emissão</h2>
+        <div class="doc-item">
+            <div class="doc-info">
+                <span class="doc-title">Certidão de Quitação Eleitoral</span>
+                <span class="doc-meta">Emitido pelo TSE</span>
+            </div>
+            <a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral#/certidoes-eleitor" target="_blank" class="btn btn-link">Acessar Site</a>
+        </div>
+        <div class="doc-item">
+            <div class="doc-info">
+                <span class="doc-title">Atestado de Antecedentes Criminais</span>
+                <span class="doc-meta">Emitido pela Polícia Civil de MG</span>
+            </div>
+            <a href="https://www.policiacivil.mg.gov.br/pagina/emissao-atestado" target="_blank" class="btn btn-link">Acessar Site</a>
+        </div>
+    </div>
+
+    <div class="doc-section">
+        <h2>📄 Documentos Pessoais</h2>
+        <div class="doc-item"><span class="doc-title">Documentação Oficial de Identificação (RG)</span><span class="status-badge">Original</span></div>
+        <div class="doc-item"><span class="doc-title">Comprovante de Endereço Atualizado</span><span class="status-badge">Últimos 3 meses</span></div>
+        <div class="doc-item"><span class="doc-title">Habilitação/Diploma ou Declaração</span><span class="status-badge">Original</span></div>
+    </div>
+
+    <section class="app-promo">
+        <h2>🚀 Cansado de lutar com o DED?</h2>
+        <p>Conheça o <b>DED+ Mobile</b>. O Diário Escolar Digital otimizado para seu celular: tela cheia, login rápido e sem travamentos.</p>
+        <a href="https://ded.professormg.com.br" class="btn-app">BAIXAR APP GRATUITO</a>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Professor MG | TechBox Academy</p>
+</footer>
+
+</body>
+</html>
