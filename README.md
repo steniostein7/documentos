@@ -1,5 +1,7 @@
 # Central de Documentação para Contratação 2026 📋
 
+Acesse o site: https://documentos.professormg.com.br para acesso aos documentos de forma fácil
+
 Este repositório contém a ferramenta **documentos.professormg.com.br**, desenvolvida para facilitar a vida do professor mineiro durante o processo de designação e contratação da SEE/MG.
 
 ## ✨ Funcionalidades
