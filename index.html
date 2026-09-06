@@ -19,29 +19,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        <style>
-        .social-links { margin-top: 20px; }
-        .social-btn {
-            display: inline-block;
-            background: rgba(48, 25, 52, 1);
-            color: white;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            border-radius: 50%;
-            margin: 0 5px;
-            transition: 0.3s;
-            text-decoration: none;
-        }
-        :root {
-            --primary: #6B3B6F; 
-            --accent: #FF8A65;  
-            --bg: #fdfdfd;
+:root {
+            --primary: #0F766E;
+            --primary-dark: #115E59;
+            --primary-soft: #E7F4F1;
+            --accent: #F59E0B;
+            --accent-dark: #D97706;
+            --bg: #F2F8F7;
+            --card: #ffffff;
+            --text: #243331;
+            --muted: #647571;
+            --line: #DCEAE7;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: #333; line-height: 1.6; }
+        body { font-family: 'Poppins', sans-serif; background: radial-gradient(circle at top left, rgba(15,118,110,.12), transparent 34%), radial-gradient(circle at top right, rgba(245,158,11,.12), transparent 30%), var(--bg); color: var(--text); line-height: 1.6; }
         
-        header { background: var(--primary); color: white; padding: 40px 20px; text-align: center; border-bottom: 8px solid var(--accent); }
+        header { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: white; padding: 40px 20px; text-align: center; border-bottom: 8px solid var(--accent); }
         .container { max-width: 800px; margin: 20px auto; padding: 20px; }
         h1 { font-size: 1.8em; margin-bottom: 10px; }
         
@@ -49,7 +42,7 @@
 
         /* BANNER PCD */
         .pcd-banner { 
-            background: linear-gradient(135deg, #6B3B6F 0%, #4a294d 100%); 
+            background: linear-gradient(135deg, #115E59 0%, #0F766E 100%); 
             color: white; 
             padding: 25px; 
             border-radius: 15px; 
@@ -57,7 +50,7 @@
             display: flex; 
             align-items: center; 
             justify-content: space-between;
-            box-shadow: 0 10px 20px rgba(107, 59, 111, 0.2);
+            box-shadow: 0 10px 20px rgba(15, 118, 110, 0.20);
         }
         .pcd-info { flex: 1; }
         .pcd-info h3 { margin-bottom: 5px; color: var(--accent); }
@@ -73,25 +66,25 @@
             white-space: nowrap;
             transition: 0.3s;
         }
-        .btn-pcd:hover { transform: scale(1.05); background: #ff9a7a; }
+        .btn-pcd:hover { transform: scale(1.05); background: #F6AD2B; }
 
         .doc-section { margin-bottom: 40px; }
-        .doc-section h2 { color: var(--primary); font-size: 1.4em; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .doc-section h2 { color: var(--primary); font-size: 1.4em; border-bottom: 2px solid #DCEAE7; padding-bottom: 10px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
         
         .doc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
 
-        .doc-item { background: white; padding: 15px 20px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: 0.2s; border: 1px solid #f0f0f0; }
+        .doc-item { background: white; padding: 15px 20px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: 0.2s; border: 1px solid #DCEAE7; }
         .doc-item:hover { transform: translateX(5px); border-color: var(--accent); }
         .doc-info { flex: 1; padding-right: 10px; }
-        .doc-title { font-weight: 600; font-size: 0.95em; color: #444; display: block; }
-        .doc-meta { font-size: 0.8em; color: #888; display: block; margin-top: 2px; }
+        .doc-title { font-weight: 600; font-size: 0.95em; color: var(--text); display: block; }
+        .doc-meta { font-size: 0.8em; color: var(--muted); display: block; margin-top: 2px; }
 
         .btn { padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85em; transition: 0.3s; text-align: center; display: inline-block; cursor: pointer; border: none; }
         .btn-download { background: var(--accent); color: white; }
         .btn-link { background: var(--primary); color: white; }
         .btn:hover { opacity: 0.9; transform: scale(1.05); }
 
-        .status-badge { font-size: 0.75em; padding: 4px 10px; border-radius: 20px; background: #eee; color: #777; font-weight: 600; }
+        .status-badge { font-size: 0.75em; padding: 4px 10px; border-radius: 20px; background: #DCEAE7; color: var(--muted); font-weight: 600; }
 
         /* BANNER DED+ (FINAL DA PÁGINA) */
         .ded-cta-banner {
@@ -108,7 +101,7 @@
         .ded-cta-icon { font-size: 2.5em; color: var(--primary); }
         .ded-cta-text { flex: 1; }
         .ded-cta-text h4 { color: var(--primary); margin-bottom: 5px; }
-        .ded-cta-text p { font-size: 0.85em; color: #666; }
+        .ded-cta-text p { font-size: 0.85em; color: var(--muted); }
         .btn-ded-cta { 
             background: var(--primary); 
             color: white; 
@@ -121,15 +114,78 @@
         }
         .btn-ded-cta:hover { background: var(--accent); transform: translateY(-3px); }
 
-        .pix-section { background: #fff; padding: 30px; border-radius: 15px; text-align: center; margin-top: 30px; border: 1px dashed #ccc; }
+        .pix-section { background: #fff; padding: 30px; border-radius: 15px; text-align: center; margin-top: 30px; border: 1px dashed #C8DCD8; }
         .pix-section h3 { font-size: 1.1em; color: var(--primary); margin-bottom: 10px; }
         .pix-container { display: flex; flex-direction: column; align-items: center; gap: 10px; }
-        .pix-box { background: #f8f9fa; padding: 12px 20px; border-radius: 8px; border: 1px solid #eee; font-family: monospace; font-weight: bold; color: var(--primary); font-size: 1em; word-break: break-all; max-width: 100%; }
-        .btn-copy { background: #28a745; color: white; padding: 10px 20px; width: auto; min-width: 180px; }
+        .pix-box { background: #F7FBFA; padding: 12px 20px; border-radius: 8px; border: 1px solid #DCEAE7; font-family: monospace; font-weight: bold; color: var(--primary); font-size: 1em; word-break: break-all; max-width: 100%; }
+        .btn-copy { background: #B45309; color: white; padding: 10px 20px; width: auto; min-width: 180px; }
         .btn-copy.copied { background: var(--primary) !important; }
         .coffee-icon { color: #6F4E37; margin-bottom: 10px; font-size: 1.5em; }
 
-        footer { text-align: center; padding: 40px; color: #999; font-size: 0.85em; }
+        footer {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px 20px 52px;
+            color: var(--muted);
+            font-size: 0.85em;
+            border-top: 1px solid rgba(15,118,110,.12);
+        }
+
+        .footer-social-groups {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            max-width: 760px;
+            margin: 0 auto 22px;
+            text-align: left;
+        }
+
+        .social-group {
+            padding: 16px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: rgba(255,255,255,.76);
+        }
+
+        .social-group-title {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+            font-size: .76rem;
+            font-weight: 800;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            min-height: 38px;
+            padding: 9px 12px;
+            color: var(--primary-dark);
+            background: var(--primary-soft);
+            border: 1px solid rgba(15,118,110,.14);
+            border-radius: 999px;
+            font-size: .88em;
+            font-weight: 700;
+            text-decoration: none;
+            transition: .2s ease;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-2px);
+            color: white;
+            background: var(--primary);
+            border-color: var(--primary);
+        }
         
         @media (max-width: 600px) {
             .pcd-banner, .ded-cta-banner { flex-direction: column; text-align: center; }
@@ -139,16 +195,24 @@
             .btn { width: 100%; }
         }
     
-        .extra-banners { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:40px 0; }
-        .tool-banner{background:#fff;border:2px solid var(--primary);border-radius:16px;padding:22px;display:flex;justify-content:space-between;align-items:center;gap:14px;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.05);transition:.2s;color:inherit}
-        .tool-banner:hover{transform:translateY(-3px)}
+        .extra-banners { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:44px 0 34px; padding:24px; border-radius:24px; background:linear-gradient(135deg,rgba(15,118,110,.10),rgba(245,158,11,.12)); border:1px solid rgba(15,118,110,.14); }
+        .tool-banner{background:#fff;border:1px solid rgba(15,118,110,.18);border-radius:20px;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:14px;text-decoration:none;box-shadow:0 12px 28px rgba(11,78,74,.08);transition:.2s;color:inherit}
+        .tool-banner:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(11,78,74,.13)}
         .tool-banner .icon{font-size:2rem;color:var(--primary)}
         .tool-banner h4{color:var(--primary);margin-bottom:4px}
         .tool-banner p{font-size:.85em;color:#666}
-        .tool-banner .cta{background:var(--primary);color:#fff;padding:10px 16px;border-radius:999px;font-weight:700;white-space:nowrap}
-        .tool-banner.planos .icon{color:#4A90E2}.tool-banner.aulas .icon{color:var(--accent)}
+        .tool-banner .cta{background:var(--primary);color:#fff;padding:11px 16px;border-radius:999px;font-weight:700;white-space:nowrap}
+        .tool-banner.planos{border-color:rgba(245,158,11,.34);background:linear-gradient(135deg,#fff,#FFF7E6)}
+        .tool-banner.planos .cta{background:var(--accent-dark)}
+        .tool-banner.planos .icon{color:#B45309}.tool-banner.aulas .icon{color:var(--accent)}
         @media(max-width:700px){.extra-banners{grid-template-columns:1fr}.tool-banner{flex-direction:column;text-align:center}.tool-banner .cta{width:100%;text-align:center}}
 
+    
+        @media (max-width: 700px) {
+            .footer-social-groups { grid-template-columns: 1fr; }
+            .social-group { text-align: center; }
+            .social-links { justify-content: center; }
+        }
     </style>
 </head>
     <!-- Google tag (gtag.js) -->
@@ -219,14 +283,14 @@
                 <span class="doc-title">Quitação Eleitoral</span>
                 <span class="doc-meta">Emitido via site do TSE</span>
             </div>
-            <a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral#/certidoes-eleitor" target="_blank" class="btn btn-link">Acessar TSE</a>
+            <a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral#/certidoes-eleitor" target="_blank" rel="noopener" class="btn btn-link">Acessar TSE</a>
         </div>
         <div class="doc-item">
             <div class="doc-info">
                 <span class="doc-title">Antecedentes Criminais</span>
                 <span class="doc-meta">Polícia Civil de Minas Gerais</span>
             </div>
-            <a href="https://www.policiacivil.mg.gov.br/pagina/emissao-atestado" target="_blank" class="btn btn-link">Acessar PCMG</a>
+            <a href="https://www.policiacivil.mg.gov.br/pagina/emissao-atestado" target="_blank" rel="noopener" class="btn btn-link">Acessar PCMG</a>
         </div>
     </div>
 
@@ -261,10 +325,10 @@
     </div>
 
     <div class="extra-banners">
-<a href="https://aulas.professormg.com.br" target="_blank" class="tool-banner aulas">
-<div style="display:flex;align-items:center;gap:14px"><div class="icon"><i class="fas fa-wand-magic-sparkles"></i></div><div><h4>Gerador de Planos de Aula</h4><p>Crie planos contextualizados alinhados às diretrizes curriculares.</p></div></div><span class="cta">Acessar</span></a>
-<a href="https://planos.professormg.com.br" target="_blank" class="tool-banner planos">
-<div style="display:flex;align-items:center;gap:14px"><div class="icon"><i class="fas fa-book-open"></i></div><div><h4>Planos de Curso SEE/MG</h4><p>Baixe planejamentos e materiais organizados por trimestre.</p></div></div><span class="cta">Ver planos</span></a>
+<a href="https://aulas.professormg.com.br" target="_blank" rel="noopener" class="tool-banner aulas">
+<div style="display:flex;align-items:center;gap:14px"><div class="icon"><i class="fas fa-wand-magic-sparkles"></i></div><div><h4>Gerador de Planos de Aula</h4><p>Crie planos de aula com habilidades, objetivos, metodologia, atividades e avaliação.</p></div></div><span class="cta">Acessar</span></a>
+<a href="https://planos.professormg.com.br" target="_blank" rel="noopener" class="tool-banner planos">
+<div style="display:flex;align-items:center;gap:14px"><div class="icon"><i class="fas fa-book-open"></i></div><div><h4>Planos de Curso do 3º Trimestre</h4><p>Acesse os planos para Anos Iniciais, Anos Finais e Ensino Médio.</p></div></div><span class="cta">Ver 3º trimestre</span></a>
 </div>
 <div class="ded-cta-banner">
         <div class="ded-cta-icon"><i class="fas fa-mobile-alt"></i></div>
@@ -285,21 +349,33 @@
                 <i class="fas fa-copy"></i> Copiar Chave PIX
             </button>
         </div>
-        <p style="font-size: 0.7em; margin-top: 15px; color: #999;">Contribuição voluntária e não obrigatória.</p>
+        <p style="font-size: 0.7em; margin-top: 15px; color: var(--muted);">Contribuição voluntária e não obrigatória.</p>
     </div>
 
     <footer>
-        <p><div class="social-links">
-                <a href="https://tiktok.com/@steniostein7" target="_blank" class="social-btn"><i class="fab fa-tiktok"></i></a>
-                <a href="https://instagram.com/steniostein7" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
-                <a href="mailto:steniostein7@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
-            </div></p>
-         <p>&copy; 2026 Professor MG | Tecbox Academy</p>
+        <div class="footer-social-groups">
+            <div class="social-group">
+                <span class="social-group-title">ProfessorMG — canais oficiais</span>
+                <div class="social-links">
+                    <a class="social-btn" href="https://instagram.com/oficialprofessormg" target="_blank" rel="noopener" aria-label="Instagram oficial do ProfessorMG"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a class="social-btn" href="https://wa.me/5535935052147" target="_blank" rel="noopener" aria-label="WhatsApp do ProfessorMG"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a class="social-btn" href="mailto:steniostein7@gmail.com" aria-label="E-mail do ProfessorMG"><i class="fas fa-envelope"></i> E-mail</a>
+                </div>
+            </div>
+            <div class="social-group">
+                <span class="social-group-title">Perfis pessoais</span>
+                <div class="social-links">
+                    <a class="social-btn" href="https://tiktok.com/@steniostein7" target="_blank" rel="noopener" aria-label="TikTok pessoal"><i class="fab fa-tiktok"></i> TikTok</a>
+                    <a class="social-btn" href="https://instagram.com/steniostein7" target="_blank" rel="noopener" aria-label="Instagram pessoal"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2026 ProfessorMG | Techbox Academy</p>
         <p>Desenvolvido com <i class="fas fa-heart" style="color: var(--accent);"></i> para a educação mineira.</p>
-        <p style="margin-top: 15px; font-size: 0.8em;">
-    Este é um projeto independente. 
-    <a href="legal.html" style="color: inherit; text-decoration: underline;">Leia o Aviso Legal e Termos de Uso.</a>
-</p>
+        <p style="margin-top: 15px; font-size: 0.82em;">
+            Este é um projeto independente.
+            <a href="legal.html" style="color: inherit; text-decoration: underline;">Leia o Aviso Legal e Termos de Uso.</a>
+        </p>
     </footer>
 </div>
 
